@@ -584,7 +584,7 @@ def auto_stack_clips(clip:          vs.VideoNode,
 
         else: #clip is RGB
             if c.format.color_family == vs.YUV:
-                 c = toRGB('Point', c, format=clip.format.id)
+                 c = toRGB('Point', c, width=w, height=h, format=clip.format.id)
                  if read_prop(c.get_frame(0), 'isError'):
                      log = log_string.getvalue()
                      c = c.text.Text(f'rgb conversion failed:\n{log}')
