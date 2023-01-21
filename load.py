@@ -4,8 +4,8 @@ Returns vapoursynth clip from  media paths including vapoursynth and avisynth sc
 Indexing of files is automatic, if needed. d2vwitch for mpeg2 files and ffmsindex if using ffms2.
 
 Vapoursynth clip could be obtained:
-1. Using Sources.get_data, that inputs list of sources/filepaths and returns a list of Clip_data dataclasses
-2. Using Sources.load_source, that inputs one source/filepath and returns a clip (no logging)
+1. Using Sources().get_data, that inputs list of sources/filepaths and returns a list of Clip_data dataclasses
+2. Using Sources{}.load_source, that inputs one source/filepath and returns a clip (no logging)
 
     To change settings use GUI:
     import load
@@ -176,7 +176,6 @@ class Sources:
     -It reads vapoursynth scripts (wanted output can be passed)
     -It reads avisynth scripts, where if avisynth+ is not installed it uses AviSynth.dll and vsavsreader.dll
                  - also remember, if avisynth is not installed, all dll's in that script have to be manually loaded
-                 - if portable vapoursynth, directory for vsavsreader.dll must be specified in settings
         
     This Sources class could be avoided calling mpeg_Source, ffms2_Source, vs_Source, avs_Source directly
     if loading manually known file extension, and still using advantage of load.py module and its indexing managment
