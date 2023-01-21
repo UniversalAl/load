@@ -1,7 +1,7 @@
 
 Returns vapoursynth clip from  media paths including vapoursynth and avisynth scripts.
 
-Indexing of files is automatic, if needed. d2vwitch for mpeg2 files and ffmsindex if using ffms2.
+Indexing of files is automatic, if needed. d2vwitch indexes for mpeg2 files and ffmsindex if using ffms2.
 
 ## Example:
 ```
