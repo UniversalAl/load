@@ -301,7 +301,7 @@ def get_matrix(clip, matrix_input=None):
     Objective is to come up with matrix for rgb conversion and log it.
     Example:
     import viewfunc
-    matrix_in, matrix_in_s, matrix_log = viewfunc.get_matrix(clip, matrix_input='470bg')
+    matrix_in, matrix_in_s = viewfunc.get_matrix(clip, matrix_input='470bg')
     print(matrix_in)
     >>>5
     
