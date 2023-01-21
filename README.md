@@ -6,7 +6,7 @@ Indexing of files is automatic, if needed. d2vwitch indexes for mpeg2 files and 
 ## Example:
 ```
 import load
-my_loader = load.Sources(d2vwitch_dir='F:\\tools')
+my_loader = load.Sources(d2vwitch_dir='F:\\tools', ffmsindex_dir='F:\\tools')
 dataclasses = my_loader.get_data(['video2.mkv','video2.mpg']
 for data in dataclasses
     clip = data.clip
