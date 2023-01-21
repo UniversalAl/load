@@ -32,3 +32,18 @@ Vapoursynth clip could be obtained:
 3. Calling a particular function that does indexing directly - mpeg2_Source(), ffms2_Source(),
    they still index automatically. Or other functions - vs_Source(), avs_Source(), imwri_Read().
    But all settings need to be passed as keyword arguments because stored settings are not used.
+
+returned data contain these attributes:
+```
+clip:                  vs.VideoNode = None
+load_isError:          bool = False
+load_log:              str  = ''
+load_log_error:        str  = ''
+load_error_exec_path:  str  = ''
+vs_output_index:       int  = None
+vs_found_outputs:      List[int] = field(default_factory=lambda: [])
+source_label:          str  = ''
+source_path:           str  = ''
+source_ext:            str  = ''
+zimg_dict_for_source:  Dict[str, Union[int, float, str, bool]] = field(default_factory=lambda: copy.deepcopy({}))
+```
