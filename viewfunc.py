@@ -576,20 +576,20 @@ def auto_stack_clips(clip:          vs.VideoNode,
             continue
         if clip.format.color_family == vs.YUV:
             if c.format.color_family == vs.YUV:
-                c = c.resize.Point(w, h, format=YUV444_)
+                c = c.resize.Bicubic(w, h, format=YUV444_)
             elif c.format.color_family == vs.RGB:
-                c = c.resize.Point(w, h, format=YUV444_, matrix=get_matrix(c)[0], range=get_zimg_range(c)[0])
+                c = c.resize.Bicubic(w, h, format=YUV444_, matrix=get_matrix(c)[0], range=get_zimg_range(c)[0])
             else:
                 raise ValueError('Optional clip for auto_stack_clips() must be YUV or RGB only')
 
         else: #clip is RGB
             if c.format.color_family == vs.YUV:
-                 c = toRGB('Point', c, width=w, height=h, format=clip.format.id)
+                 c = toRGB('Bicubic', c, width=w, height=h, format=clip.format.id)
                  if read_prop(c.get_frame(0), 'isError'):
                      log = log_string.getvalue()
                      c = c.text.Text(f'rgb conversion failed:\n{log}')
             elif c.format.color_family == vs.RGB:
-                c = c.resize.Point(w, h)
+                c = c.resize.Bicubic(w, h)
             else:
                 raise ValueError('Optional clip for auto_stack_clips() must be YUV or RGB only')
         clips.append(c)
