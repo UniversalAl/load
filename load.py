@@ -74,24 +74,25 @@ D2VWITCH_OPTIONS = '--input-range "limited"  --single-input'
 D2VSOURCE_KWARGS = dict(rff=True, threads=0)
 
 DEFAULT_PLUGIN_MAP = {
-    'mpeg2_Source':           ['m2t mp2 vob mpg mpv m2v',
-                               dict(d2vwitch_options=D2VWITCH_OPTIONS)], 
+    'mpeg2_Source':           ['m2t mp2 vob mpg mpv m2v'
+                               dict(d2vwitch_options=D2VWITCH_OPTIONS)],
     'd2v.Source':             ['d2v',
                                D2VSOURCE_KWARGS],
     'ffms2_Source':           ['avi mkv 264 h264 265 h265 dv webm',
                                {}],
+    'imwri_Read':             ['',
+                               dict(mismatch=False, alpha=False, float_output=False)],
     'vs_Source':              ['py vpy',
                                {}],
     'avs_Source':             ['avs'],
-    
-    'imwri_Read':             ['png jpg jpeg tif tiff exr',
-                               dict(mismatch=False, alpha=False, float_output=False)],  
     'avisource.AVISource':    ['',
-                               {}],
+                               {}]
     'ffms2.Source':           ['',
-                               {}],    
+                               {}]
+    'imwri.Read':             ['png jpg jpeg tif tiff exr',
+                               dict(mismatch=False, alpha=False, float_output=False)],
     'lsmas.LibavSMASHSource': ['mp4 mov m4v 3gp 3g2 mj2 dvb dcf m21',
-                               {}],      
+                               {}],
     'lsmas.LWLibavSource':    ['m2ts ts mts mxf',
                                {}],
                       }
