@@ -84,7 +84,8 @@ DEFAULT_PLUGIN_MAP = {
                                dict(mismatch=False, alpha=False, float_output=False)],
     'vs_Source':              ['py vpy',
                                {}],
-    'avs_Source':             ['avs'],
+    'avs_Source':             ['avs',
+                               {}],
     'avisource.AVISource':    ['',
                                {}]
     'ffms2.Source':           ['',
