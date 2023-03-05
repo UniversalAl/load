@@ -5,7 +5,7 @@ Indexing of files is automatic, if needed. d2vwitch for mpeg2 files and ffmsinde
 
 Vapoursynth clip could be obtained:
 1. Using Sources().get_data, that inputs list of sources/filepaths and returns a list of Clip_data dataclasses
-2. Using Sources{}.load_source, that inputs one source/filepath and returns a clip (no logging)
+2. Using Sources().load_source, that inputs one source/filepath and returns a clip (no logging)
 
     To change settings use GUI:
     import load
