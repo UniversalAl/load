@@ -89,7 +89,7 @@ DEFAULT_PLUGIN_MAP = {
     'avisource.AVISource':    ['',
                                {}],
     'ffms2.Source':           ['',
-                               {}]
+                               {}],
     'imwri.Read':             ['png jpg jpeg tif tiff exr',
                                dict(mismatch=False, alpha=False, float_output=False)],
     'lsmas.LibavSMASHSource': ['mp4 mov m4v 3gp 3g2 mj2 dvb dcf m21',
