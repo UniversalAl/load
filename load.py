@@ -87,7 +87,7 @@ DEFAULT_PLUGIN_MAP = {
     'avs_Source':             ['avs',
                                {}],
     'avisource.AVISource':    ['',
-                               {}]
+                               {}],
     'ffms2.Source':           ['',
                                {}]
     'imwri.Read':             ['png jpg jpeg tif tiff exr',
