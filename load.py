@@ -74,7 +74,7 @@ D2VWITCH_OPTIONS = '--input-range "limited"  --single-input'
 D2VSOURCE_KWARGS = dict(rff=True, threads=0)
 
 DEFAULT_PLUGIN_MAP = {
-    'mpeg2_Source':           ['m2t mp2 vob mpg mpv m2v'
+    'mpeg2_Source':           ['m2t mp2 vob mpg mpv m2v',
                                dict(d2vwitch_options=D2VWITCH_OPTIONS)],
     'd2v.Source':             ['d2v',
                                D2VSOURCE_KWARGS],
