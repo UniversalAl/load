@@ -11,7 +11,8 @@ dataclasses = my_loader.get_data(['video2.mkv','video2.mpg']
 for data in dataclasses:
     clip = data.clip
     if data.load_isError:
-        log = data.load_log
+        print(data.load_log)
+        print(data.load_log_error)
         #clip was not loaded, can read the log,  abort
     # work with clip here
 ```
