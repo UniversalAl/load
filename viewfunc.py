@@ -818,7 +818,8 @@ def rgb_clip_from_numpy(img, length=1):
     if not IS_NUMPY: raise ImportError('[viewfunc] error_img() needs numpy module to be installed')    
     def get_vsFrame(n, f, img):
         vsFrame = f.copy()
-        [np.copyto(np.asarray(vsFrame.get_write_array(i)), img[:, :, i]) for i in [2,1,0]]
+        if isAPI4: [np.copyto(np.asarray(vsFrame[i]), img[:, :, i]) for i in [2,1,0]]
+        else:      [np.copyto(np.asarray(vsFrame.get_write_array(i)), img[:, :, i]) for i in [2,1,0]]
         return vsFrame
     placeholder = core.std.BlankClip(width=img.shape[1], height=img.shape[0], format=vs.RGB24, length=length)
     clip = core.std.ModifyFrame(placeholder, placeholder, lambda n,f: get_vsFrame(n,f,img=img))
