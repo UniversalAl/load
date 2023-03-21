@@ -830,7 +830,7 @@ def default_error_rgb_clip(width=1280, height=720, format=vs.RGB24, length=1):
     if IS_NUMPY and IS_OPENCV and format==vs.RGB24:
         #black rgb will have two red cross lines
         return rgb_clip_from_numpy(error_img(width, height), length=length)
-    return core.std.BlankClip(width=width, height=height, format=rgb_format, length=length)
+    return core.std.BlankClip(width=width, height=height, format=format, length=length)
 
 
 def clip_info(clip):
